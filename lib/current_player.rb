@@ -8,4 +8,11 @@ def turn_count(array)
   return counter
 end
 
-def current_player
+def current_player(array)
+  counts = turn_count(array)
+  if counts == 0 || !((counts % 2) == 0)
+    return "X"
+  else
+    return "O"
+  end
+end
